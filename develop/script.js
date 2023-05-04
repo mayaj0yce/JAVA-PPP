@@ -34,7 +34,7 @@ function writePassword() {
 
 // };
 
-function generatePassword() {
+function generatePassword() {{
 
     enter = parseInt(prompt("How many characters?"));
     
@@ -44,15 +44,15 @@ function generatePassword() {
         enter = parseInt(prompt("You must choose between 8 and 128"));
 
     } else {
-        confirmCharacter = confirm("Will this contain special characters?");
-        confirmNumber = confirm("Will this contain numbers?");
-        confirmUppercase = confirm("Will this contain Uppercase letters?");
-        confirmLowercase = confirm("Will this contain Lowercase letters?");
+        confirmCharacter = confirm("Use special characters?");
+        confirmNumber = confirm("Use numbers?");
+        confirmUppercase = confirm("Use Uppercase letters?");
+        confirmLowercase = confirm("Use Lowercase letters?");
     };
 }
 
 if (!confirmCharacter && !confirmNumber && !confirmUppercase && !confirmLowercase) {
-    choices = alert("You must choose a criteria!");
+    choices = alert("Pick your criteria!");
 }
 else if (confirmCharacter && confirmNumber && confirmUppercase && confirmLowercase) {
     choices = character.concat(number, alpha, alpha2);
@@ -111,10 +111,16 @@ for (var i = 0; i < enter; i++) {
     password.push(pickChoices);
 
 }
-var ps = password.join("");
-
 
 function UserInput(ps) {
-document.getElementById("password").textContent = ps;
+document.getElementById("placeholder").textContent = password;
 
 }
+ var ps = password.join("");
+    UserInput(ps);
+    return ps;
+
+function UserInput(ps) {
+    document.getElementById("password").textContent = ps;
+
+}}
