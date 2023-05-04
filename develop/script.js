@@ -29,14 +29,13 @@ space = [];
 // });
 
 var generateBtn = document.querySelector("#generate");
+
 generateBtn.addEventListener("click", writePassword);
 
 function writePassword() {
     var password = generatePassword();
     var passwordText = document.querySelector("#password");
-  
     passwordText.value = password;
-  
   }
   
 
@@ -50,6 +49,8 @@ function generatePassword() {
         enter = parseInt(prompt("You must choose between 8 and 128"));
 
     } else {
+enter = parseInt(prompt("Will this contain special characters"));
+
 
         confirmNumber = confirm("Will this contain numbers?");
 
@@ -131,6 +132,7 @@ else if (confirmUppercase) {
 // }
 
 var password = [];
+
 for (var i = 0; i < enter; i++) {
     var pickChoices = choices[Math.floor(Math.random() * choices.length)];
     password.push(pickChoices);
