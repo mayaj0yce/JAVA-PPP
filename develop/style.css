@@ -118,6 +118,11 @@ button {
   overflow: hidden;
 }
 
+footer {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
